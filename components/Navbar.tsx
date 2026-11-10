@@ -28,7 +28,7 @@ export default function Navbar() {
           </Link>
           <a
             href="#download"
-            className="rounded-full bg-[#E05A6D] px-4 py-2 font-heading text-sm font-semibold tracking-wide text-white shadow-sm transition-all hover:bg-[#C94557] hover:shadow focus:outline-none focus:ring-2 focus:ring-[#FF8A9B] focus:ring-offset-2"
+            className="rounded-full bg-[#E05A6D] px-5 py-2.5 font-heading text-sm font-semibold tracking-wide text-white shadow-sm transition-all hover:bg-[#C94557] hover:shadow active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#E05A6D] focus:ring-offset-2"
           >
             Download App
           </a>

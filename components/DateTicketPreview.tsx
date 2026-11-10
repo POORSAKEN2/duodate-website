@@ -18,14 +18,14 @@ export default function DateTicketPreview() {
       {/* Ticket Header */}
       <div className="mb-4 flex items-center justify-between border-b border-dashed border-[#E2E8F0] pb-3">
         <div>
-          <span className="font-heading text-xs font-semibold uppercase tracking-wider text-[#E05A6D]">
+          <span className="font-heading text-xs font-bold uppercase tracking-wider text-[#A62639]">
             Friday Date Night
           </span>
           <h4 className="font-heading text-lg font-bold text-[#1E293B]">
             Osteria & Rooftop Bar
           </h4>
         </div>
-        <div className="rounded-full bg-[#FCE7EB] px-2.5 py-1 text-xs font-medium text-[#E05A6D]">
+        <div className="rounded-full bg-[#FCE7EB] px-2.5 py-1 text-xs font-bold text-[#A62639]">
           7:30 PM
         </div>
       </div>
@@ -73,7 +73,7 @@ export default function DateTicketPreview() {
 
       {/* Cohesion Status Badge */}
       <div className="mt-4 flex items-center justify-center rounded-2xl bg-[#FCE7EB] py-2.5 px-4 text-center">
-        <span className="font-heading text-sm font-bold tracking-tight text-[#E05A6D]">
+        <span className="font-heading text-sm font-bold tracking-tight text-[#A62639]">
           COHESION CHECK: MATCHED ✨
         </span>
       </div>

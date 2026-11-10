@@ -7,7 +7,7 @@ export default function MascotSection() {
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center">
-          <span className="font-heading text-xs font-semibold uppercase tracking-[0.08em] text-[#E05A6D] sm:text-sm">
+          <span className="font-heading text-xs font-bold uppercase tracking-[0.08em] text-[#A62639] sm:text-sm">
             THE COMPANIONS
           </span>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#1E293B] sm:text-4xl lg:text-[40px] lg:leading-[46px]">
@@ -24,7 +24,7 @@ export default function MascotSection() {
           <div className="flex flex-col justify-between rounded-3xl border border-[#E2E8F0] bg-white p-6 shadow-sm transition-all hover:border-[#E05A6D]/40 hover:shadow-md sm:p-8">
             <div>
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-[#FCE7EB] px-3 py-1 font-heading text-xs font-bold uppercase tracking-wider text-[#E05A6D]">
+                <span className="rounded-full bg-[#FCE7EB] px-3.5 py-1 font-heading text-xs font-bold uppercase tracking-wider text-[#A62639]">
                   THE REALIST
                 </span>
                 <span className="h-3 w-3 rounded-full bg-[#E05A6D]" />
@@ -44,7 +44,7 @@ export default function MascotSection() {
                   <h3 className="font-heading text-2xl font-bold text-[#1E293B]">
                     Huff
                   </h3>
-                  <p className="font-heading text-sm text-[#E05A6D]">
+                  <p className="font-heading text-sm font-semibold text-[#A62639]">
                     Coral Wingbird
                   </p>
                 </div>
@@ -69,7 +69,7 @@ export default function MascotSection() {
           <div className="flex flex-col justify-between rounded-3xl border border-[#E2E8F0] bg-white p-6 shadow-sm transition-all hover:border-[#FF9EAA]/60 hover:shadow-md sm:p-8">
             <div>
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-[#FFE8EC] px-3 py-1 font-heading text-xs font-bold uppercase tracking-wider text-[#FF9EAA]">
+                <span className="rounded-full bg-[#FFE8EC] px-3.5 py-1 font-heading text-xs font-bold uppercase tracking-wider text-[#BE3A58]">
                   THE OPTIMIST
                 </span>
                 <span className="h-3 w-3 rounded-full bg-[#FF9EAA]" />
@@ -89,7 +89,7 @@ export default function MascotSection() {
                   <h3 className="font-heading text-2xl font-bold text-[#1E293B]">
                     Chihi
                   </h3>
-                  <p className="font-heading text-sm text-[#FF9EAA]">
+                  <p className="font-heading text-sm font-semibold text-[#BE3A58]">
                     Blush Pink Wingbird
                   </p>
                 </div>
@@ -121,13 +121,13 @@ export default function MascotSection() {
 
           <div className="mx-auto max-w-2xl space-y-3">
             <div className="flex items-start gap-3">
-              <span className="font-heading text-sm font-bold text-[#E05A6D]">Huff:</span>
+              <span className="font-heading text-sm font-bold text-[#A62639]">Huff:</span>
               <p className="text-sm font-medium text-[#1E293B]">
                 &ldquo;The restaurant was 12 minutes late on our table.&rdquo;
               </p>
             </div>
             <div className="flex items-start gap-3">
-              <span className="font-heading text-sm font-bold text-[#FF9EAA]">Chihi:</span>
+              <span className="font-heading text-sm font-bold text-[#BE3A58]">Chihi:</span>
               <p className="text-sm font-medium text-[#1E293B]">
                 &ldquo;And the tiramisu was incredible. 10/10 night.&rdquo;
               </p>

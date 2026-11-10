@@ -6,7 +6,7 @@ export default function RealityCheckSection() {
     <section className="relative px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-4xl text-center">
         {/* Section Eyebrow */}
-        <span className="font-heading text-xs font-semibold uppercase tracking-[0.08em] text-[#E05A6D] sm:text-sm">
+        <span className="font-heading text-xs font-bold uppercase tracking-[0.08em] text-[#A62639] sm:text-sm">
           THE REALITY OF DATE NIGHT
         </span>
 
@@ -32,7 +32,7 @@ export default function RealityCheckSection() {
               />
             </div>
             <div className="text-left">
-              <span className="font-heading text-xs font-bold text-[#E05A6D]">Huff:</span>
+              <span className="font-heading text-xs font-bold text-[#A62639]">Huff:</span>
               <p className="text-sm font-medium italic text-[#1E293B]">
                 &ldquo;Couch and takeout, night four?&rdquo;
               </p>
@@ -51,7 +51,7 @@ export default function RealityCheckSection() {
               />
             </div>
             <div className="text-left">
-              <span className="font-heading text-xs font-bold text-[#FF9EAA]">Chihi:</span>
+              <span className="font-heading text-xs font-bold text-[#BE3A58]">Chihi:</span>
               <p className="text-sm font-medium italic text-[#1E293B]">
                 &ldquo;Not tonight. We've got plans.&rdquo;
               </p>
