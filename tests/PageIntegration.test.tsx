@@ -13,7 +13,7 @@ describe("DuoDate Landing Page Integration", () => {
     expect(
       screen.getByRole("heading", {
         level: 1,
-        name: "No more hoodie-vs-gown disasters.",
+        name: "DuoDate",
       })
     ).toBeInTheDocument();
 

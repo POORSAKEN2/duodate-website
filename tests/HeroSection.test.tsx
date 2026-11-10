@@ -3,14 +3,13 @@ import { render, screen } from "@testing-library/react";
 import HeroSection from "@/components/HeroSection";
 
 describe("HeroSection Component", () => {
-  it("renders exact eyebrow, H1 headline, and subhead from spec", () => {
+  it("renders big DuoDate heading and subhead", () => {
     render(<HeroSection />);
 
-    expect(screen.getByText("BUILT EXCLUSIVELY FOR TWO")).toBeInTheDocument();
     expect(
       screen.getByRole("heading", {
         level: 1,
-        name: "No more hoodie-vs-gown disasters.",
+        name: "DuoDate",
       })
     ).toBeInTheDocument();
     expect(
@@ -20,21 +19,18 @@ describe("HeroSection Component", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders store download badges and trust tag", () => {
+  it("renders store download badges", () => {
     render(<HeroSection />);
 
     expect(screen.getByRole("link", { name: /Download on the App Store/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Get it on Google Play/i })).toBeInTheDocument();
-    expect(
-      screen.getByText("Free to use • No ads • Private by design")
-    ).toBeInTheDocument();
   });
 
-  it("renders Date Ticket mockup with side-by-side outfits and cohesion check badge", () => {
+  it("renders the wingbirds mascot illustration", () => {
     render(<HeroSection />);
 
-    expect(screen.getByText("COHESION CHECK: MATCHED ✨")).toBeInTheDocument();
-    expect(screen.getByText("Cocktail Dress")).toBeInTheDocument();
-    expect(screen.getByText("Blazer & Oxford")).toBeInTheDocument();
+    const mascotImg = screen.getByAltText(/DuoDate Wingbirds Huff and Chihi waving hello/i);
+    expect(mascotImg).toBeInTheDocument();
+    expect(mascotImg).toHaveAttribute("src", expect.stringContaining("hello-wingbirds.png"));
   });
 });
