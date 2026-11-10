@@ -7,10 +7,6 @@ export default function RealityCheckSection() {
     <section className="bg-white px-4 py-24 sm:px-6 sm:py-32">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
-          <span className="text-sm font-semibold text-[#6E6E73]">
-            The reality of date night
-          </span>
-
           <h2 className="mt-4 font-heading text-4xl font-bold tracking-tight text-[#1D1D1F] sm:text-5xl lg:text-[56px] lg:leading-[1.05]">
             You shouldn&apos;t need three chat apps and a coin toss just to go
             to dinner.

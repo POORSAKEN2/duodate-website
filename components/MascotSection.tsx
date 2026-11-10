@@ -8,9 +8,6 @@ export default function MascotSection() {
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <Reveal className="text-center">
-          <span className="text-sm font-semibold text-[#6E6E73]">
-            The companions
-          </span>
           <h2 className="mt-4 font-heading text-4xl font-bold tracking-tight text-[#1D1D1F] sm:text-5xl lg:text-[56px] lg:leading-[1.05]">
             Meet Huff &amp; Chihi
           </h2>
@@ -95,9 +92,6 @@ export default function MascotSection() {
 
         {/* Date Night Debrief */}
         <Reveal delay={0.15} className="mx-auto mt-16 max-w-xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-wider text-[#6E6E73]">
-            Date night debrief
-          </span>
           <div className="mt-4 space-y-2">
             <p className="text-base text-[#1D1D1F]">
               <span className="font-heading font-bold text-[#E05A6D]">Huff:</span>{" "}
