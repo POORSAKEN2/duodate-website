@@ -3,15 +3,15 @@ import FeatureCard from "./FeatureCard";
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+    <section id="features" className="scroll-mt-20 px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <div className="text-center">
           <span className="font-heading text-xs font-semibold uppercase tracking-[0.08em] text-[#E05A6D] sm:text-sm">
-            HOW DUODATE WORKS
+            CORE FEATURES
           </span>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#1E293B] sm:text-4xl lg:text-[40px] lg:leading-[46px]">
-            Built around the moments that actually matter.
+            Everything you need to keep date night alive.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-[#64748B] sm:text-lg">
             Three focused tools to keep your plans intentional and your memories intact.
@@ -22,13 +22,13 @@ export default function FeaturesSection() {
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Card 1: The Fit Check */}
           <FeatureCard
-            tag="SIGNATURE FEATURE"
+            tag="OUTFIT HARMONY"
             title="The Fit Check"
-            description="Pick the vibe—Casual, Chic, Cozy, or Active. Snap your outfit, lock it in, and see your partner's fit appear side-by-side. Never be the only one in jeans again."
+            description="Snap what you're wearing before you leave the house. DuoDate gives you an instant cohesion score so nobody shows up overdressed, underdressed, or wearing clashing neon."
             pills={[
-              "Side-by-side Date Ticket",
-              "5 Preset Vibe Selectors",
-              "Zero outfit spoilers until both lock in",
+              "Side-by-side outfit preview",
+              "Instant cohesion score",
+              "Discreet tweak suggestions",
             ]}
             visualContent={
               <div className="flex flex-col items-center justify-center py-4 text-center">
@@ -45,13 +45,13 @@ export default function FeaturesSection() {
 
           {/* Card 2: Dates On The Books */}
           <FeatureCard
-            tag="SHARED CALENDAR"
+            tag="INTENTIONAL SCHEDULING"
             title="Dates On The Books"
-            description="Lock in the restaurant, the time, and the plans in one private space that syncs to both your phones. A live countdown on your home screen keeps the excitement building all week."
+            description="No more open-ended 'we should hang out sometime.' Lock in a venue, a time, and a dress code with one tap. Add notes, pin locations, and get gentle nudges before the night begins."
             pills={[
-              "Real-time synchronization",
-              "Live days/hours countdown",
-              "Private notes & reservations",
+              "Dedicated date cards",
+              "Synced reminders for two",
+              "Venue & dress code locking",
             ]}
             visualContent={
               <div className="flex flex-col items-center justify-center py-4 text-center">
@@ -66,13 +66,13 @@ export default function FeaturesSection() {
 
           {/* Card 3: Memories That Stick */}
           <FeatureCard
-            tag="PRIVATE TIMELINE"
+            tag="COUPLE MEMORY BOX"
             title="Memories That Stick"
-            description="Past dates don't vanish into a camera roll of 10,000 grocery screenshots. Save your favorite moments, build your couple milestones, and look back on where you've been."
+            description="Rate your night, drop private photos, and build an ongoing timeline of where you've been together. Because the best nights shouldn't get lost in your camera roll."
             pills={[
-              "Dedicated shared timeline",
-              "Date streak & couple achievements",
-              "100% ad-free & private",
+              "Private couple timeline",
+              "Post-date rating prompts",
+              "Photo capsule per date",
             ]}
             visualContent={
               <div className="relative flex items-center justify-center py-4">

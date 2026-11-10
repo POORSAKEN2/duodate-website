@@ -3,14 +3,18 @@ import { render, screen } from "@testing-library/react";
 import FeaturesSection from "@/components/FeaturesSection";
 
 describe("FeaturesSection Component", () => {
-  it("renders section header and 3 core feature cards", () => {
-    render(<FeaturesSection />);
+  it("renders section header and 3 core feature cards with scroll-mt-20 offset", () => {
+    const { container } = render(<FeaturesSection />);
 
-    expect(screen.getByText("HOW DUODATE WORKS")).toBeInTheDocument();
+    const section = container.querySelector("#features");
+    expect(section).toBeInTheDocument();
+    expect(section).toHaveClass("scroll-mt-20");
+
+    expect(screen.getByText("CORE FEATURES")).toBeInTheDocument();
     expect(
       screen.getByRole("heading", {
         level: 2,
-        name: "Built around the moments that actually matter.",
+        name: "Everything you need to keep date night alive.",
       })
     ).toBeInTheDocument();
 
@@ -24,13 +28,25 @@ describe("FeaturesSection Component", () => {
     render(<FeaturesSection />);
 
     // Tags
-    expect(screen.getByText("SIGNATURE FEATURE")).toBeInTheDocument();
-    expect(screen.getByText("SHARED CALENDAR")).toBeInTheDocument();
-    expect(screen.getByText("PRIVATE TIMELINE")).toBeInTheDocument();
+    expect(screen.getByText("OUTFIT HARMONY")).toBeInTheDocument();
+    expect(screen.getByText("INTENTIONAL SCHEDULING")).toBeInTheDocument();
+    expect(screen.getByText("COUPLE MEMORY BOX")).toBeInTheDocument();
 
     // Pills
-    expect(screen.getByText("Side-by-side Date Ticket")).toBeInTheDocument();
-    expect(screen.getByText("Real-time synchronization")).toBeInTheDocument();
-    expect(screen.getByText("Dedicated shared timeline")).toBeInTheDocument();
+    const expectedPills = [
+      "Side-by-side outfit preview",
+      "Instant cohesion score",
+      "Discreet tweak suggestions",
+      "Dedicated date cards",
+      "Synced reminders for two",
+      "Venue & dress code locking",
+      "Private couple timeline",
+      "Post-date rating prompts",
+      "Photo capsule per date",
+    ];
+
+    expectedPills.forEach((pill) => {
+      expect(screen.getByText(pill)).toBeInTheDocument();
+    });
   });
 });
