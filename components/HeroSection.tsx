@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-white px-4 pt-16 pb-16 sm:px-6 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24">
-      <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
+      <div className="mx-auto flex max-w-7xl flex-col items-center text-center">
         {/* Big DuoDate Title */}
-        <h1 className="font-heading text-6xl font-black tracking-tight text-black sm:text-7xl md:text-8xl lg:text-[136px] lg:leading-[0.95] xl:text-[168px] xl:leading-[0.9]">
+        <h1 className="font-heading text-6xl font-black tracking-tight text-black sm:text-8xl md:text-[130px] md:leading-[0.9] lg:text-[200px] lg:leading-[0.88] xl:text-[278px] xl:leading-[0.85]">
           DuoDate
         </h1>
 
