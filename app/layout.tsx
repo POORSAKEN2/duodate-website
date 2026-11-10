@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Barlow, Barlow_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 import "lenis/dist/lenis.css";
@@ -22,6 +22,24 @@ export const metadata: Metadata = {
   title: "DuoDate — The Private Date Night App for Two",
   description:
     "Plan real dates, match your outfits before stepping out, and keep track of your favorite nights together. DuoDate is the private couple's app built strictly for two.",
+  openGraph: {
+    title: "DuoDate — No more hoodie-vs-gown disasters.",
+    description:
+      "A private app for couples to plan dates, coordinate outfits, and celebrate their favorite nights together.",
+    url: "https://duodate.app",
+    siteName: "DuoDate",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DuoDate — No more hoodie-vs-gown disasters.",
+    description:
+      "A private app for couples to plan dates, coordinate outfits, and celebrate their favorite nights together.",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#E05A6D",
 };
 
 export default function RootLayout({

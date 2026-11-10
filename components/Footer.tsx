@@ -19,7 +19,10 @@ export default function Footer() {
         </div>
 
         {/* Links Bar */}
-        <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-[#64748B]">
+        <nav
+          aria-label="Footer navigation"
+          className="flex flex-wrap items-center justify-center gap-6 text-sm text-[#64748B]"
+        >
           <Link href="#privacy" className="transition-colors hover:text-[#1E293B]">
             Privacy Policy
           </Link>
@@ -45,11 +48,11 @@ export default function Footer() {
           >
             TikTok
           </a>
-        </div>
+        </nav>
 
         {/* Copyright */}
         <div className="text-center text-xs text-[#64748B] sm:text-right">
-          © 2026 DuoDate. All rights reserved.
+          © 2026 DuoDate. All rights reserved. Built strictly for two.
         </div>
       </div>
     </footer>
