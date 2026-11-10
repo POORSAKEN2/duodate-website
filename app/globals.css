@@ -11,13 +11,13 @@
   --color-secondary: #FF9EAA;
   --color-brand-contrast: #A62639;
   --color-optimist-contrast: #BE3A58;
-  --color-background: #FBF9F9;
-  --color-canvas: #FBF9F9;
+  --color-background: #FFFFFF;
+  --color-canvas: #FFFFFF;
   --color-surface: #FFFFFF;
-  --color-surface-variant: #F3EFEF;
-  --color-text-main: #1E293B;
-  --color-text-secondary: #64748B;
-  --color-border-subtle: #E2E8F0;
+  --color-surface-variant: #F5F5F7;
+  --color-text-main: #1D1D1F;
+  --color-text-secondary: #6E6E73;
+  --color-border-subtle: #E8E8ED;
 }
 
 @theme {

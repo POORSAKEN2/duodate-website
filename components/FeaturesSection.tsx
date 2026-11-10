@@ -1,26 +1,27 @@
 import React from "react";
 import Image from "next/image";
 import FeatureCard from "./FeatureCard";
+import Reveal from "./Reveal";
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="scroll-mt-20 px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+    <section id="features" className="scroll-mt-20 bg-[#F5F5F7] px-4 py-24 sm:px-6 sm:py-32">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
-        <div className="text-center">
-          <span className="font-heading text-xs font-bold uppercase tracking-[0.08em] text-[#A62639] sm:text-sm">
-            CORE FEATURES
+        <Reveal className="text-center">
+          <span className="text-sm font-semibold text-[#6E6E73]">
+            Core features
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#1E293B] sm:text-4xl lg:text-[40px] lg:leading-[46px]">
+          <h2 className="mt-4 font-heading text-4xl font-bold tracking-tight text-[#1D1D1F] sm:text-5xl lg:text-[56px] lg:leading-[1.05]">
             Everything you need to keep date night alive.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-[#64748B] sm:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-[#6E6E73]">
             Three focused tools to keep your plans intentional and your memories intact.
           </p>
-        </div>
+        </Reveal>
 
         {/* 3-Card Grid */}
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <Reveal delay={0.1} className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Card 1: The Fit Check */}
           <FeatureCard
             tag="OUTFIT HARMONY"
@@ -181,7 +182,7 @@ export default function FeaturesSection() {
               </div>
             }
           />
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FBF9F9",
+  themeColor: "#FFFFFF",
 };
 
 export default function RootLayout({
@@ -62,7 +62,7 @@ export default function RootLayout({
       lang="en"
       className={`${barlow.variable} ${barlowSemiCondensed.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#FBF9F9] text-[#1E293B]">
+      <body className="min-h-full flex flex-col bg-white text-[#1D1D1F]">
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
