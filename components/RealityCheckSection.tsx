@@ -1,63 +1,54 @@
 import React from "react";
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 export default function RealityCheckSection() {
   return (
-    <section className="relative px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-4xl text-center">
-        {/* Section Eyebrow */}
-        <span className="font-heading text-xs font-bold uppercase tracking-[0.08em] text-[#A62639] sm:text-sm">
-          THE REALITY OF DATE NIGHT
-        </span>
+    <section className="bg-white px-4 py-24 sm:px-6 sm:py-32">
+      <div className="mx-auto max-w-3xl text-center">
+        <Reveal>
+          <h2 className="mt-4 font-heading text-4xl font-bold tracking-tight text-[#1D1D1F] sm:text-5xl lg:text-[56px] lg:leading-[1.05]">
+            You shouldn&apos;t need three chat apps and a coin toss just to go
+            to dinner.
+          </h2>
 
-        {/* H2 Headline */}
-        <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-[#1E293B] sm:text-4xl lg:text-[40px] lg:leading-[46px]">
-          You shouldn't need three chat apps and a coin toss just to go to dinner.
-        </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#6E6E73]">
+            Half-baked plans buried in message threads. Twenty minutes of
+            &ldquo;I don&apos;t mind, what do you want?&rdquo; Mismatched
+            outfits at the door. DuoDate cuts the guesswork so date night feels
+            like an event, not admin.
+          </p>
+        </Reveal>
 
-        {/* Narrative Copy */}
-        <p className="mt-6 text-lg leading-relaxed text-[#64748B] sm:text-xl lg:leading-[35px]">
-          Most date nights unravel the same way: half-baked plans buried in message threads, twenty minutes of &ldquo;I don't mind, what do you want?&rdquo;, and one person stepping out in cocktail attire while the other is still tying running shoes. DuoDate cuts out the guesswork so planning an evening together feels like an event, not an administrative task.
-        </p>
-
-        {/* Mascot Whisper Bubble */}
-        <div className="mt-10 inline-flex flex-col items-center gap-4 rounded-3xl border border-[#E2E8F0] bg-white p-5 shadow-sm sm:flex-row sm:gap-6 sm:px-8 sm:py-4">
+        <Reveal
+          delay={0.1}
+          className="mt-14 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-14"
+        >
           <div className="flex items-center gap-3">
-            <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full bg-[#FCE7EB]">
-              <Image
-                src="/images/huff-neutral.png"
-                alt="Huff"
-                fill
-                className="object-contain p-1"
-              />
-            </div>
-            <div className="text-left">
-              <span className="font-heading text-xs font-bold text-[#A62639]">Huff:</span>
-              <p className="text-sm font-medium italic text-[#1E293B]">
-                &ldquo;Couch and takeout, night four?&rdquo;
-              </p>
-            </div>
+            <Image
+              src="/images/huff-neutral.png"
+              alt="Huff"
+              width={44}
+              height={44}
+              className="h-11 w-11 object-contain"
+            />
+            <p className="text-sm italic text-[#6E6E73]">
+              &ldquo;Couch and takeout, night four?&rdquo;
+            </p>
           </div>
-
-          <div className="hidden h-8 w-px bg-[#E2E8F0] sm:block" />
-
           <div className="flex items-center gap-3">
-            <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full bg-[#FFE8EC]">
-              <Image
-                src="/images/chichi-neutral.png"
-                alt="Chihi"
-                fill
-                className="object-contain p-1"
-              />
-            </div>
-            <div className="text-left">
-              <span className="font-heading text-xs font-bold text-[#BE3A58]">Chihi:</span>
-              <p className="text-sm font-medium italic text-[#1E293B]">
-                &ldquo;Not tonight. We've got plans.&rdquo;
-              </p>
-            </div>
+            <Image
+              src="/images/chichi-neutral.png"
+              alt="Chihi"
+              width={44}
+              height={44}
+              className="h-11 w-11 object-contain"
+            />
+            <p className="text-sm italic text-[#6E6E73]">
+              &ldquo;Not tonight. We&apos;ve got plans.&rdquo;
+            </p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

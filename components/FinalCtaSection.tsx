@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 export default function FinalCtaSection() {
   return (
-    <section id="download" className="scroll-mt-20 px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
-      <div className="relative mx-auto max-w-5xl rounded-3xl border border-[#E2E8F0] bg-gradient-to-br from-[#FFFFFF] to-[#FCE7EB]/50 p-8 shadow-xl sm:p-12 lg:p-16">
-        {/* Perched Mascot Image */}
-        <div className="mb-6 flex justify-center">
+    <section id="download" className="scroll-mt-20 bg-[#F5F5F7] px-4 py-24 sm:px-6 sm:py-32">
+      <Reveal className="mx-auto max-w-3xl text-center">
+        <div className="mb-8 flex justify-center">
           <Image
             src="/images/reunion.png"
             alt="Huff and Chihi perched together"
@@ -16,50 +16,25 @@ export default function FinalCtaSection() {
           />
         </div>
 
-        <div className="text-center">
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-[#1E293B] sm:text-4xl lg:text-5xl">
-            Date night starts before you leave the house.
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-[#64748B] sm:text-lg">
-            Download DuoDate, invite your person, and lock in your first date in under two minutes.
-          </p>
-        </div>
+        <h2 className="font-heading text-4xl font-bold tracking-tight text-[#1D1D1F] sm:text-5xl lg:text-[64px] lg:leading-[1.03]">
+          Date night starts before you leave the house.
+        </h2>
+        <p className="mx-auto mt-6 max-w-xl text-lg text-[#6E6E73]">
+          Download DuoDate, invite your person, and lock in your first date in
+          under two minutes.
+        </p>
 
-        {/* 3-Step Setup Strip */}
-        <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          <div className="rounded-2xl border border-[#E2E8F0] bg-white p-5 shadow-sm text-center">
-            <span className="font-heading text-base font-bold text-[#A62639]">
-              1. Download for Two
-            </span>
-            <p className="mt-2 text-xs leading-relaxed text-[#64748B]">
-              One invite link connects both phones instantly. No shared passwords, no awkward calendar invites.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-[#E2E8F0] bg-white p-5 shadow-sm text-center">
-            <span className="font-heading text-base font-bold text-[#A62639]">
-              2. Pick Your First Vibe
-            </span>
-            <p className="mt-2 text-xs leading-relaxed text-[#64748B]">
-              Choose dinner, drinks, casual stroll, or something new. Set the time and lock the dress code.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-[#E2E8F0] bg-white p-5 shadow-sm text-center">
-            <span className="font-heading text-base font-bold text-[#A62639]">
-              3. Step Out in Sync
-            </span>
-            <p className="mt-2 text-xs leading-relaxed text-[#64748B]">
-              Snap your fit, get your cohesion score, and head out the door knowing neither of you is overdressed.
-            </p>
-          </div>
-        </div>
+        {/* Steps as one quiet line */}
+        <p className="mt-8 text-sm font-medium text-[#6E6E73]">
+          Download for two&ensp;·&ensp;Pick your vibe&ensp;·&ensp;Step out in
+          sync
+        </p>
 
         {/* Store Download Badges */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
             href="#download"
-            className="group inline-flex items-center gap-3 rounded-2xl border border-neutral-800 bg-[#111827] px-5 py-3 text-white shadow-md transition-all hover:bg-black hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#E05A6D] focus:ring-offset-2"
+            className="group inline-flex items-center gap-3 rounded-2xl bg-[#111827] px-5 py-3 text-white transition-all hover:bg-black hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#E05A6D] focus:ring-offset-2"
             aria-label="Download on the App Store"
           >
             <svg className="h-7 w-7 flex-shrink-0 fill-white" viewBox="0 0 24 24" aria-hidden="true">
@@ -77,7 +52,7 @@ export default function FinalCtaSection() {
 
           <a
             href="#download"
-            className="group inline-flex items-center gap-3 rounded-2xl border border-neutral-800 bg-[#111827] px-5 py-3 text-white shadow-md transition-all hover:bg-black hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#E05A6D] focus:ring-offset-2"
+            className="group inline-flex items-center gap-3 rounded-2xl bg-[#111827] px-5 py-3 text-white transition-all hover:bg-black hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#E05A6D] focus:ring-offset-2"
             aria-label="Get it on Google Play"
           >
             <svg className="h-6 w-6 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
@@ -110,10 +85,11 @@ export default function FinalCtaSection() {
         </div>
 
         {/* Trust Tag */}
-        <p className="mt-6 text-center font-heading text-xs font-medium tracking-wide text-[#64748B]">
-          100% Private • Just the Two of You • No Social Feeds
+        <p className="mt-8 text-xs font-medium tracking-wide text-[#6E6E73]">
+          100% Private&ensp;·&ensp;Just the Two of You&ensp;·&ensp;No Social
+          Feeds
         </p>
-      </div>
+      </Reveal>
     </section>
   );
 }
