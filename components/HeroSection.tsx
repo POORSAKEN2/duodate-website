@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative overflow-hidden bg-white px-4 pt-16 pb-16 sm:px-6 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24">
       <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
         {/* Big DuoDate Title */}
-        <h1 className="font-heading text-8xl font-black tracking-tight text-black sm:text-[110px] sm:leading-[0.95] md:text-[150px] md:leading-[0.9] lg:text-[200px] lg:leading-[0.88] xl:text-[240px] xl:leading-[0.85]">
+        <h1 className="font-heading text-6xl font-black tracking-tight text-black sm:text-7xl md:text-8xl lg:text-[136px] lg:leading-[0.95] xl:text-[168px] xl:leading-[0.9]">
           DuoDate
         </h1>
 
