@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,10 +9,16 @@ export default function Footer() {
         {/* Brand */}
         <div className="text-center sm:text-left">
           <div className="flex items-center justify-center gap-1.5 sm:justify-start">
+            <Image
+              src="/images/duodate-icon.png"
+              alt=""
+              width={24}
+              height={24}
+              className="rounded-md"
+            />
             <span className="font-heading text-base font-bold tracking-tight text-[#1D1D1F]">
               DuoDate
             </span>
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#E05A6D]" />
           </div>
           <p className="mt-1">
             Built exclusively for couples who still date each other.

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -9,8 +10,14 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-1.5 font-heading text-lg font-bold tracking-tight text-[#1D1D1F] transition-colors hover:text-[#E05A6D] focus:outline-none"
         >
+          <Image
+            src="/images/duodate-icon.png"
+            alt=""
+            width={28}
+            height={28}
+            className="rounded-lg"
+          />
           DuoDate
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#E05A6D]" />
         </Link>
 
         <div className="flex items-center gap-6">
