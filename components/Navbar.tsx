@@ -15,19 +15,19 @@ export default function Navbar() {
 
         <div className="flex items-center gap-6">
           <Link
-            href="#features"
+            href="/#features"
             className="hidden text-xs font-medium text-[#6E6E73] transition-colors hover:text-[#1D1D1F] sm:inline-block"
           >
             Features
           </Link>
           <Link
-            href="#mascots"
+            href="/#mascots"
             className="hidden text-xs font-medium text-[#6E6E73] transition-colors hover:text-[#1D1D1F] sm:inline-block"
           >
             Huff &amp; Chihi
           </Link>
           <a
-            href="#download"
+            href="/#download"
             className="rounded-full bg-[#E05A6D] px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-[#C94557] focus:outline-none focus:ring-2 focus:ring-[#E05A6D] focus:ring-offset-2"
           >
             Download

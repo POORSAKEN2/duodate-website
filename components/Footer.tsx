@@ -23,15 +23,24 @@ export default function Footer() {
           aria-label="Footer navigation"
           className="flex flex-wrap items-center justify-center gap-5"
         >
-          <Link href="#privacy" className="transition-colors hover:text-[#1D1D1F]">
+          <Link href="/privacy" className="transition-colors hover:text-[#1D1D1F]">
             Privacy Policy
           </Link>
-          <Link href="#terms" className="transition-colors hover:text-[#1D1D1F]">
+          <Link href="/terms" className="transition-colors hover:text-[#1D1D1F]">
             Terms of Service
           </Link>
-          <Link href="#support" className="transition-colors hover:text-[#1D1D1F]">
-            Support
+          <Link
+            href="/delete-account"
+            className="transition-colors hover:text-[#1D1D1F]"
+          >
+            Delete Account
           </Link>
+          <a
+            href="mailto:supportduodate@gmail.com"
+            className="transition-colors hover:text-[#1D1D1F]"
+          >
+            Support
+          </a>
           <a
             href="https://instagram.com"
             target="_blank"
