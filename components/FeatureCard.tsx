@@ -34,7 +34,7 @@ export default function FeatureCard({
       </div>
 
       {/* Visual stage */}
-      <div className="relative z-10 mt-8 flex flex-1 flex-col justify-center overflow-hidden rounded-[20px] border border-black/[0.04] bg-gradient-to-b from-[#FBF9F9]/80 to-[#F5F1F1]/80 p-4 shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] backdrop-blur-sm transition-colors duration-300 group-hover:border-black/[0.07]">
+      <div className="relative z-10 mt-8 flex flex-1 flex-col justify-center">
         {visualContent}
       </div>
     </div>

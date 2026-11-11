@@ -42,28 +42,28 @@ export default function FeaturesSection() {
 
                 {/* Outfits side-by-side */}
                 <div className="mt-3.5 grid flex-1 grid-cols-2 gap-3">
-                  <div className="group/item relative flex flex-col overflow-hidden rounded-2xl border border-black/[0.05] bg-white p-2 text-center shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#F3EFEF] md:aspect-auto md:flex-1">
+                  <div className="group/item relative flex flex-col justify-center text-center">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden">
                       <Image
-                        src="/images/date-sample-1.jpg"
-                        alt="Partner A outfit sample"
+                        src="/images/fit-tailored-blazer.png"
+                        alt="Huff in a tailored blazer"
                         fill
-                        className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/item:scale-105"
-                      />
-                    </div>
-                    <span className="mt-2 block font-heading text-xs font-semibold tracking-tight text-[#1D1D1F]">Cocktail Dress</span>
-                  </div>
-
-                  <div className="group/item relative flex flex-col overflow-hidden rounded-2xl border border-black/[0.05] bg-white p-2 text-center shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-[#F3EFEF] md:aspect-auto md:flex-1">
-                      <Image
-                        src="/images/date-sample-2.jpg"
-                        alt="Partner B outfit sample"
-                        fill
-                        className="object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/item:scale-105"
+                        className="object-contain p-3 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/item:scale-105"
                       />
                     </div>
                     <span className="mt-2 block font-heading text-xs font-semibold tracking-tight text-[#1D1D1F]">Tailored Blazer</span>
+                  </div>
+
+                  <div className="group/item relative flex flex-col justify-center text-center">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden">
+                      <Image
+                        src="/images/fit-cocktail-dress.png"
+                        alt="Chihi in a cocktail dress"
+                        fill
+                        className="scale-[1.35] -translate-y-[10%] object-contain p-3 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/item:scale-[1.42]"
+                      />
+                    </div>
+                    <span className="mt-2 block font-heading text-xs font-semibold tracking-tight text-[#1D1D1F]">Cocktail Dress</span>
                   </div>
                 </div>
               </div>
@@ -76,32 +76,13 @@ export default function FeaturesSection() {
             description="Lock in a venue, a time, and a dress code with one tap."
             visualContent={
               <div className="flex flex-col py-1">
-                <div className="rounded-2xl border border-black/[0.05] bg-white p-4 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-                  <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#475569]">
-                      <span className="h-2 w-2 rounded-full bg-[#E05A6D] shadow-[0_0_6px_rgba(224,90,109,0.5)]" />
-                      Upcoming Reservation
-                    </span>
-                    <span className="rounded-full border border-[#E05A6D]/20 bg-[#FCE7EB]/80 px-2.5 py-0.5 font-heading text-xs font-bold text-[#A62639]">
-                      Fri • 7:30 PM
-                    </span>
-                  </div>
-
-                  <div className="mt-3">
-                    <h4 className="font-heading text-lg font-bold tracking-tight text-[#1D1D1F]">
-                      Dinner at Osteria & Bar
-                    </h4>
-                    <p className="mt-0.5 text-xs font-medium text-[#6E6E73]">
-                      Table for 2 • Dress code: Smart Casual
-                    </p>
-                  </div>
-
-                  <div className="mt-4 flex items-center justify-between border-t border-black/[0.05] pt-3">
-                    <span className="text-[11px] font-medium text-[#6E6E73]">Countdown</span>
-                    <span className="inline-flex items-center gap-1.5 rounded-lg bg-neutral-900 px-2.5 py-1 font-heading text-xs font-semibold text-white shadow-xs">
-                      <span className="text-[10px]">⏳</span> 2 days, 4 hours
-                    </span>
-                  </div>
+                <div className="relative aspect-video w-full overflow-hidden">
+                  <Image
+                    src="/images/dinner-date.png"
+                    alt="Huff and Chihi having a candlelit dinner"
+                    fill
+                    className="scale-[1.7] object-contain"
+                  />
                 </div>
               </div>
             }
@@ -117,10 +98,10 @@ export default function FeaturesSection() {
                   <div className="absolute top-1 left-3 h-28 w-38 rotate-[-6deg] rounded-2xl border border-black/[0.06] bg-white p-2.5 shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:rotate-[-2deg] hover:scale-105">
                     <div className="relative h-15 w-full overflow-hidden rounded-xl bg-[#F3EFEF]">
                       <Image
-                        src="/images/date-sample-2.jpg"
-                        alt="Memories thumbnail"
+                        src="/images/memory-picnic.png"
+                        alt="Huff and Chihi on a picnic blanket"
                         fill
-                        className="object-cover"
+                        className="scale-[1.15] object-cover"
                       />
                     </div>
                     <span className="mt-1.5 block text-[11px] font-medium text-[#475569]">
@@ -131,10 +112,10 @@ export default function FeaturesSection() {
                   <div className="absolute top-2.5 right-3 h-28 w-38 rotate-[4deg] rounded-2xl border border-black/[0.06] bg-white p-2.5 shadow-[0_12px_28px_rgba(0,0,0,0.1)] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:rotate-[1deg] hover:scale-105">
                     <div className="relative h-15 w-full overflow-hidden rounded-xl bg-[#F3EFEF]">
                       <Image
-                        src="/images/date-sample-1.jpg"
-                        alt="Anniversary dinner thumbnail"
+                        src="/images/dinner-date.png"
+                        alt="Osteria dinner thumbnail"
                         fill
-                        className="object-cover"
+                        className="scale-[2.2] object-contain"
                       />
                     </div>
                     <div className="mt-1.5 flex items-center justify-between">
