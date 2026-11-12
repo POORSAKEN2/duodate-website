@@ -3,6 +3,8 @@ import { Barlow, Barlow_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 import "lenis/dist/lenis.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const barlow = Barlow({
   variable: "--font-barlow",
@@ -64,6 +66,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-white text-[#1D1D1F]">
         <SmoothScroll>{children}</SmoothScroll>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

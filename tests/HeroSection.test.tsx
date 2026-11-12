@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 
 describe("HeroSection Component", () => {
   it("renders big DuoDate heading and subhead", () => {
-    render(<HeroSection />);
+    render(<HeroSection publicRelease={false} />);
 
     expect(
       screen.getByRole("heading", {
@@ -19,15 +19,22 @@ describe("HeroSection Component", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders store download badges", () => {
-    render(<HeroSection />);
+  it("renders store links when publicRelease is true", () => {
+    render(<HeroSection publicRelease={true} />);
 
     expect(screen.getByRole("link", { name: /Download on the App Store/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Get it on Google Play/i })).toBeInTheDocument();
   });
 
+  it("renders waitlist buttons when publicRelease is false", () => {
+    render(<HeroSection publicRelease={false} />);
+
+    expect(screen.getByRole("button", { name: /Download on the App Store/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Get it on Google Play/i })).toBeInTheDocument();
+  });
+
   it("renders the wingbirds mascot illustration", () => {
-    render(<HeroSection />);
+    render(<HeroSection publicRelease={false} />);
 
     const mascotImg = screen.getByAltText(/DuoDate Wingbirds Huff and Chihi waving hello/i);
     expect(mascotImg).toBeInTheDocument();
