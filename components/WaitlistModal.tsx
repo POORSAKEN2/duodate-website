@@ -8,6 +8,8 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 export default function WaitlistModal({ onClose }: { onClose: () => void }) {
   const [email, setEmail] = useState("");
+  const [os, setOs] = useState("");
+  const [notifyPlayStore, setNotifyPlayStore] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
 
   useEffect(() => {
@@ -30,6 +32,8 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
         },
         body: JSON.stringify({
           email,
+          os,
+          notify_play_store: notifyPlayStore ? "yes" : "no",
           _subject: "DuoDate waitlist signup",
         }),
       });
@@ -104,6 +108,36 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
                 placeholder="you@example.com"
                 className="mt-2 w-full rounded-xl border border-neutral-300 px-4 py-2.5 text-[#1D1D1F] placeholder:text-neutral-400 focus:border-[#E05A6D] focus:outline-none focus:ring-2 focus:ring-[#E05A6D]/30"
               />
+
+              <label
+                htmlFor="waitlist-os"
+                className="mt-4 block text-sm font-medium text-[#1D1D1F]"
+              >
+                What phone do you use?
+              </label>
+              <select
+                id="waitlist-os"
+                required
+                value={os}
+                onChange={(e) => setOs(e.target.value)}
+                className="mt-2 w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-[#1D1D1F] focus:border-[#E05A6D] focus:outline-none focus:ring-2 focus:ring-[#E05A6D]/30"
+              >
+                <option value="" disabled>
+                  Select your OS
+                </option>
+                <option value="android">Android</option>
+                <option value="ios">iPhone (iOS)</option>
+              </select>
+
+              <label className="mt-4 flex items-start gap-3 text-sm text-[#1D1D1F]">
+                <input
+                  type="checkbox"
+                  checked={notifyPlayStore}
+                  onChange={(e) => setNotifyPlayStore(e.target.checked)}
+                  className="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E05A6D]"
+                />
+                Notify me when DuoDate is available on Google Play
+              </label>
 
               {status === "error" && (
                 <p className="mt-3 text-sm text-red-600">

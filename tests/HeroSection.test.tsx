@@ -26,11 +26,11 @@ describe("HeroSection Component", () => {
     expect(screen.getByRole("link", { name: /Get it on Google Play/i })).toBeInTheDocument();
   });
 
-  it("renders waitlist buttons when publicRelease is false", () => {
+  it("renders a Join waitlist button when publicRelease is false", () => {
     render(<HeroSection publicRelease={false} />);
 
-    expect(screen.getByRole("button", { name: /Download on the App Store/i })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Get it on Google Play/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Join waitlist/i })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /Google Play/i })).not.toBeInTheDocument();
   });
 
   it("renders the wingbirds mascot illustration", () => {

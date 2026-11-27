@@ -76,47 +76,77 @@ export default function StoreBadges({
   const className = badgeClass[variant];
 
   const badges: Array<{
+    platform: "ios" | "android";
     label: string;
     href: string;
     content: React.ReactNode;
   }> = [
     {
+      platform: "ios",
       label: "Download on the App Store",
       href: APP_STORE_URL,
       content: <AppStoreBadgeContent />,
     },
     {
+      platform: "android",
       label: "Get it on Google Play",
       href: PLAY_STORE_URL,
       content: <GooglePlayBadgeContent />,
     },
   ];
 
+  function trackStoreClick(platform: "ios" | "android") {
+    try {
+      const payload = JSON.stringify({
+        platform,
+        source: "website_store_click",
+      });
+      if (typeof navigator !== "undefined" && typeof navigator.sendBeacon === "function") {
+        navigator.sendBeacon(
+          "/api/analytics/download",
+          new Blob([payload], { type: "application/json" })
+        );
+        return;
+      }
+      void fetch("/api/analytics/download", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+        keepalive: true,
+      });
+    } catch {
+      // Never block outbound store navigation
+    }
+  }
+
+  if (!publicRelease) {
+    return (
+      <>
+        <button
+          type="button"
+          className={`${className} font-heading text-base font-bold`}
+          onClick={() => setModalOpen(true)}
+        >
+          Join waitlist
+        </button>
+        {modalOpen && <WaitlistModal onClose={() => setModalOpen(false)} />}
+      </>
+    );
+  }
+
   return (
     <>
-      {badges.map((badge) =>
-        publicRelease ? (
-          <a
-            key={badge.label}
-            href={badge.href}
-            className={className}
-            aria-label={badge.label}
-          >
-            {badge.content}
-          </a>
-        ) : (
-          <button
-            key={badge.label}
-            type="button"
-            className={className}
-            aria-label={badge.label}
-            onClick={() => setModalOpen(true)}
-          >
-            {badge.content}
-          </button>
-        )
-      )}
-      {modalOpen && <WaitlistModal onClose={() => setModalOpen(false)} />}
+      {badges.map((badge) => (
+        <a
+          key={badge.label}
+          href={badge.href}
+          onClick={() => trackStoreClick(badge.platform)}
+          className={className}
+          aria-label={badge.label}
+        >
+          {badge.content}
+        </a>
+      ))}
     </>
   );
 }

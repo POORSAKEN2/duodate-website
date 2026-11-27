@@ -23,25 +23,27 @@ describe("StoreBadges — public release", () => {
 });
 
 describe("StoreBadges — waitlist mode", () => {
-  it("renders buttons instead of links when publicRelease is false", () => {
+  it("renders a single Join waitlist button instead of store badges", () => {
     render(<StoreBadges publicRelease={false} />);
 
-    expect(screen.getByRole("button", { name: /Download on the App Store/i })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Get it on Google Play/i })).toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: /App Store/i })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Join waitlist/i })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /App Store|Google Play/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link")).not.toBeInTheDocument();
   });
 
   it("opens waitlist modal with email field and Android-first note on badge click", () => {
     render(<StoreBadges publicRelease={false} />);
 
-    fireEvent.click(screen.getByRole("button", { name: /Get it on Google Play/i }));
+    fireEvent.click(screen.getByRole("button", { name: /Join waitlist/i }));
 
     expect(screen.getByRole("dialog")).toBeInTheDocument();
     expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/what phone do you use/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/notify me when DuoDate is available on Google Play/i)).not.toBeChecked();
     expect(
       screen.getByText(/due to (a )?limited budget/i)
     ).toBeInTheDocument();
-    expect(screen.getByText(/Android/)).toBeInTheDocument();
+    expect(screen.getByText(/launch on Android/)).toBeInTheDocument();
   });
 
   it("submits email to FormSubmit and shows success message", async () => {
@@ -49,10 +51,14 @@ describe("StoreBadges — waitlist mode", () => {
     vi.stubGlobal("fetch", fetchMock);
 
     render(<StoreBadges publicRelease={false} />);
-    fireEvent.click(screen.getByRole("button", { name: /Download on the App Store/i }));
+    fireEvent.click(screen.getByRole("button", { name: /Join waitlist/i }));
     fireEvent.change(screen.getByLabelText(/email/i), {
       target: { value: "fan@example.com" },
     });
+    fireEvent.change(screen.getByLabelText(/what phone do you use/i), {
+      target: { value: "ios" },
+    });
+    fireEvent.click(screen.getByLabelText(/notify me/i));
     fireEvent.submit(screen.getByTestId("waitlist-form"));
 
     await waitFor(() => {
@@ -64,13 +70,15 @@ describe("StoreBadges — waitlist mode", () => {
     );
     const body = JSON.parse(fetchMock.mock.calls[0][1].body);
     expect(body.email).toBe("fan@example.com");
+    expect(body.os).toBe("ios");
+    expect(body.notify_play_store).toBe("yes");
   });
 
   it("shows an error message when the request fails", async () => {
     vi.stubGlobal("fetch", vi.fn().mockRejectedValue(new Error("network down")));
 
     render(<StoreBadges publicRelease={false} />);
-    fireEvent.click(screen.getByRole("button", { name: /Get it on Google Play/i }));
+    fireEvent.click(screen.getByRole("button", { name: /Join waitlist/i }));
     fireEvent.change(screen.getByLabelText(/email/i), {
       target: { value: "fan@example.com" },
     });
@@ -83,7 +91,7 @@ describe("StoreBadges — waitlist mode", () => {
 
   it("closes the modal with the close button", () => {
     render(<StoreBadges publicRelease={false} />);
-    fireEvent.click(screen.getByRole("button", { name: /Get it on Google Play/i }));
+    fireEvent.click(screen.getByRole("button", { name: /Join waitlist/i }));
     expect(screen.getByRole("dialog")).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: /close/i }));
